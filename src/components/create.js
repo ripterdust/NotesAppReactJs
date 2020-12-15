@@ -1,9 +1,21 @@
 import React from 'react';
 
 
-const Create = () => {
+const Create = ({noteState}) => {
 
-	 return <>Crear una nueva nota</>
+	const saveNote = () => {
+
+		noteState(elems => [...elems, 'Hola']);
+
+	};
+
+	
+	return <>
+	
+		<button onClick={saveNote}>Crear</button>
+
+
+	</>
 
 }
 

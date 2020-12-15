@@ -1,18 +1,21 @@
 import React from 'react';
 
 
-const AllNotes = (notes) => {
-	 
-			
-	 if(notes.length > 0){
+const AllNotes = ({notes}) => {
 
-			return <></>
 
-	 } else{
+	if(notes){
 
-			return <div className="alert alert-danger">Por favor crea una nueva nota</div>
+		return <div>
 
-	 }
+		</div>
+
+
+	} else{
+
+		return <div className="alert alert-danger">Por favor crea una nueva nota</div>
+
+	}
 	 
 
 
