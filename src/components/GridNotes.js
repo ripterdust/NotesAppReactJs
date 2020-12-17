@@ -2,12 +2,12 @@ import React from 'react';
 
 import Note from './note';
 
-const GridNotes = ({ Data }) => {
-	return <div className="row align-items-center">
+const GridNotes = ({ Data, ModData }) => {
+	return <div className="row">
 
 		{
 
-			Data.map((elem, index) => <Note Data={elem} Index={index}/>)
+			Data.map((elem, index) => <Note Data={elem} Index={index} ModData={ModData}/>)
 
 		}
 

@@ -33,9 +33,9 @@ const App = () => {
 
 				 </div>
 				 <Switch>
-						<div className="container mt-2">
+						<div className="container mt-5">
 							<Route exact path="/">
-								<AllNotes notes={note} />
+								<AllNotes notes={note} ModNotes={setNote}/>
 							</Route>
 							 <Route exact path="/crear">
 								<Create noteState={setNote}/>

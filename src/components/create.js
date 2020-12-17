@@ -35,7 +35,6 @@ const Create = ({noteState}) => {
 			</div>
 			<input type="submit" value="Crear" className="btn btn-outline-primary"/>
 		</form>
-		<h1>{input}</h1>
 	</>
 
 }
