@@ -1,20 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 const Create = ({noteState}) => {
+	
+	const [ input, setInput ] = useState('');
+	
+	const inputValue = (e) => {
 
-	const saveNote = () => {
+		setInput(e.target.value)
 
-		noteState(elems => [...elems, 'Hola']);
+	};
 
+	const saveNote = (e) => {
+	
+		e.preventDefault();
+		noteState(note => [input, ...note])
+		setInput('');
 	};
 
 	
 	return <>
 	
-		<button onClick={saveNote}>Crear</button>
-
-
+		<form action="" onSubmit={ saveNote } className="form card p-5 mt-3"> 
+			<div className="mb-4">
+				<h2>Crear nueva nota</h2>
+				<br/>
+				<input 
+					type="text" 
+					id="" 
+					onChange={inputValue} 
+					value={input} 
+					className="form-control" 
+					placeholder="Ingrese su nueva nota"/>
+			</div>
+			<input type="submit" value="Crear" className="btn btn-outline-primary"/>
+		</form>
+		<h1>{input}</h1>
 	</>
 
 }
